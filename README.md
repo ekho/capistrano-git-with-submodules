@@ -8,7 +8,7 @@ For Capistrano 3.0-3.6 use old [capistrano-git-submodule-stragtegy](https://gith
 
 ####Gemfile
 ```ruby
-gem 'capistrano-git-with-submodules', '~> 0.1', :github => 'ekho/capistrano-git-with-submodules-plugin'
+gem 'capistrano-git-with-submodules', '~> 0.1', :github => 'ekho/capistrano-git-with-submodules'
 ```
 
 ####Capfile
