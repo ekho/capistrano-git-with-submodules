@@ -19,7 +19,7 @@ install_plugin Capistrano::SCM::Git
 ```
 to
 ```ruby
-require "capistrano/scm/git_with_submodules"
+require "capistrano/scm/git-with-submodules"
 install_plugin Capistrano::SCM::Git::WithSubmodules
 ```
 
