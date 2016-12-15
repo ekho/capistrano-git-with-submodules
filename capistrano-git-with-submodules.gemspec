@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
   s.name        = "capistrano-git-with-submodules"
-  s.version     = '1.0.0'
+  s.version     = '1.0.1'
   s.authors     = ["Boris Gorbylev"]
   s.email       = "ekho@ekho.name"
-  s.homepage    = "https://github.com/ekho/capistrano-git-with-submodules-plugin"
+  s.homepage    = "https://github.com/ekho/capistrano-git-with-submodules"
   s.summary     = "Git submodules support for Capistrano 3.7+"
   s.description = "Git submodules support for Capistrano 3.7+"
   s.required_rubygems_version = ">= 1.3.6"
