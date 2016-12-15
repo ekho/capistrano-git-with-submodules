@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "capistrano-git-with-submodules"
-  s.version     = '1.0.1'
+  s.version     = '1.0.2'
   s.authors     = ["Boris Gorbylev"]
   s.email       = "ekho@ekho.name"
   s.homepage    = "https://github.com/ekho/capistrano-git-with-submodules"
@@ -10,4 +10,5 @@ Gem::Specification.new do |s|
   s.files = ["lib/capistrano/scm/git-with-submodules.rb"]
   s.extra_rdoc_files = ['README.md', 'LICENSE']
   s.license = 'MIT'
+  s.add_dependency "capistrano", "~> 3.7"
 end
