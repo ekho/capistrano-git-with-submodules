@@ -2,7 +2,7 @@
 
 Git submodule support for Capistrano 3.7+
 
-For Capistrano 3.0-3.6 use old [capistrano-git-submodule-stragtegy](https://github.com/ekho/capistrano-git-submodule-strategy)
+For Capistrano 3.0-3.6 use old [capistrano-git-submodule-strategy](https://github.com/ekho/capistrano-git-submodule-strategy)
 
 ## Using
 
