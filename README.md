@@ -1,4 +1,4 @@
-# capistrano-git-with-submodules-plugin [![Gem](https://img.shields.io/gem/v/capistrano-git-with-submodules.svg?maxAge=2592000)](https://rubygems.org/gems/capistrano-git-with-submodules) [![Gem](https://img.shields.io/gem/dt/capistrano-git-with-submodules.svg?maxAge=2592000)](https://rubygems.org/gems/capistrano-git-with-submodules)
+# capistrano-git-with-submodules [![Gem](https://img.shields.io/gem/v/capistrano-git-with-submodules.svg?maxAge=2592000)](https://rubygems.org/gems/capistrano-git-with-submodules) [![Gem](https://img.shields.io/gem/dt/capistrano-git-with-submodules.svg?maxAge=2592000)](https://rubygems.org/gems/capistrano-git-with-submodules)
 
 Git submodule support for Capistrano 3.7+
 
@@ -29,7 +29,7 @@ Optionally you can keep git metadata (.git directory)
 set :git_keep_meta, true
 ```
 
-## Contributing to capistrano-git-with-submodules-plugin
+## Contributing to capistrano-git-with-submodules
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
