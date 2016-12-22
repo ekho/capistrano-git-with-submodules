@@ -9,11 +9,9 @@ class Capistrano::SCM::Git::WithSubmodules < Capistrano::SCM::Git
     return unless backend.test(:test, '-e', release_path) && backend.test("ls -A #{release_path} | read linevar")
 
     submodules_to_release_path
-
-    unless fetch(:git_keep_meta, false)
-      verbose = Rake.application.options.trace ? 'v' : ''
-      backend.execute("find #{release_path} -name '.git*' | xargs -I {} rm -rf#{verbose} '{}'")
-    end
+    
+    verbose = Rake.application.options.trace ? 'v' : ''
+    backend.execute("find #{release_path} -name '.git*' | xargs -I {} rm -rf#{verbose} '{}'")
   end
 
   ##
