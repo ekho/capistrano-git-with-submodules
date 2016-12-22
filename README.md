@@ -17,7 +17,7 @@ Latest revision from github
 gem 'capistrano-git-with-submodules', '~> 1.1', :github => 'ekho/capistrano-git-with-submodules'
 ```
 
-####Capfile
+#### Capfile
 Change default
 ```ruby
 require "capistrano/scm/git"
@@ -27,12 +27,6 @@ to
 ```ruby
 require "capistrano/scm/git-with-submodules"
 install_plugin Capistrano::SCM::Git::WithSubmodules
-```
-
-####deploy.rb
-Optionally you can keep git metadata (.git directory)
-```ruby
-set :git_keep_meta, true
 ```
 
 ## Contributing to capistrano-git-with-submodules
