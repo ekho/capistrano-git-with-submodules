@@ -9,25 +9,22 @@ For Capistrano 3.0-3.6 use old [capistrano-git-submodule-strategy](https://githu
 #### Gemfile
 From rubygems.org (recommended)
 ```ruby
-gem 'capistrano-git-with-submodules', '~> 1.2'
+gem 'capistrano-git-with-submodules', '~> 2.0'
 ```
 
 Latest revision from github
 ```ruby
-gem 'capistrano-git-with-submodules', '~> 1.2', :github => 'ekho/capistrano-git-with-submodules'
+gem 'capistrano-git-with-submodules', '~> 2.0', :github => 'ekho/capistrano-git-with-submodules'
 ```
 
 #### Capfile
-Change default
+After
 ```ruby
 require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
 ```
-to
+add
 ```ruby
-require "capistrano/scm/git"
-install_plugin Capistrano::SCM::Git
-
 require "capistrano/scm/git-with-submodules"
 install_plugin Capistrano::SCM::Git::WithSubmodules
 ```

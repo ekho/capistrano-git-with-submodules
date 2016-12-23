@@ -1,4 +1,4 @@
-require "capistrano/scm/git"
+require "capistrano/plugin"
 
 class Capistrano::SCM::Git::WithSubmodules < Capistrano::Plugin
 
@@ -29,7 +29,7 @@ class Capistrano::SCM::Git::WithSubmodules < Capistrano::Plugin
 
                 execute :git, :reset, '--mixed', quiet, fetch(:branch)
                 execute :git, :submodule, 'update', '--init', '--depth', 1, '--checkout', '--recursive', quiet
-                execute :find, release_path, "-name '.git'", "-printf 'Deleted %p'", "-delete"
+                execute :find, release_path, "-name '.git'", "-printf 'removed %p'", "-delete"
                 execute :rm, "-f#{verbose}", temp_index_file_path.to_s
               end if test :test, '-f', release_path.join('.gitmodules')
             end
