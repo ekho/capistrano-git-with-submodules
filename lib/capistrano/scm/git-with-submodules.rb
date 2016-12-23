@@ -6,12 +6,11 @@ class Capistrano::SCM::Git::WithSubmodules < Capistrano::SCM::Git
   def archive_to_release_path
     origin_archive_to_release_path
 
-    return unless backend.test(:test, '-e', release_path) && backend.test("ls -A #{release_path} | read linevar")
+    return unless backend.test(:test, '-f', release_path.join('.gitmodules'))
 
     submodules_to_release_path
-    
-    verbose = Rake.application.options.trace ? 'v' : ''
-    backend.execute("find #{release_path} -name '.git*' | xargs -I {} rm -rf#{verbose} '{}'")
+
+    backend.execute("find #{release_path} -name '.git' -printf 'Deleted %p' -delete")
   end
 
   ##
