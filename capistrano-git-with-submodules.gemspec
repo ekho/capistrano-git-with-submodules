@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "capistrano-git-with-submodules"
-  s.version     = '2.0.0'
+  s.version     = '2.0.1'
   s.authors     = ["Boris Gorbylev"]
   s.email       = "ekho@ekho.name"
   s.homepage    = "https://github.com/ekho/capistrano-git-with-submodules"
