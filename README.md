@@ -29,6 +29,8 @@ require "capistrano/scm/git-with-submodules"
 install_plugin Capistrano::SCM::Git::WithSubmodules
 ```
 
+> If you are upgrading from [`capistrano-git-submodule-strategy`](https://github.com/ekho/capistrano-git-submodule-strategy#using) you should remove its settings from your `Gemfile`, `Capfile` and `deploy.rb`.
+
 ## Contributing to capistrano-git-with-submodules
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
