@@ -27,7 +27,7 @@ class Capistrano::SCM::Git::WithSubmodules < Capistrano::Plugin
                 verbose = Rake.application.options.trace ? 'v' : ''
                 quiet = Rake.application.options.trace ? '' : '--quiet'
 
-                execute :git, :reset, '--mixed', quiet, fetch(:branch)
+                execute :git, :reset, '--mixed', quiet, fetch(:branch), '--'
                 execute :git, :submodule, 'update', '--init', '--checkout', '--recursive', quiet
                 execute :find, release_path, "-name '.git'", "|",  "xargs -I {} rm -rf#{verbose} '{}'"
                 execute :rm, "-f#{verbose}", temp_index_file_path.to_s
