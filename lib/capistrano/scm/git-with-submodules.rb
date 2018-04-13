@@ -28,8 +28,16 @@ class Capistrano::SCM::Git::WithSubmodules < Capistrano::Plugin
                 quiet = Rake.application.options.trace ? '' : '--quiet'
 
                 execute :git, :reset, '--mixed', quiet, fetch(:branch), '--'
-                execute :git, :submodule, 'sync', '--recursive', quiet
-                execute :git, :submodule, 'update', '--init', '--checkout', '--recursive', quiet
+                update_submodule = proc do
+                  execute :git, :submodule, 'update',
+                          '--init', '--checkout', '--recursive', quiet
+                end
+                begin
+                  update_submodule.call
+                rescue SSHKit::Command::Failed
+                  execute :git, :submodule, 'sync', '--recursive', quiet
+                  update_submodule.call
+                end
                 execute :find, release_path, "-name '.git'", "|",  "xargs -I {} rm -rf#{verbose} '{}'"
                 execute :rm, "-f#{verbose}", temp_index_file_path.to_s
               end if test :test, '-f', release_path.join('.gitmodules')
