@@ -4,6 +4,8 @@ Git submodule support for Capistrano 3.7+
 
 For Capistrano 3.0-3.6 use old [capistrano-git-submodule-strategy](https://github.com/ekho/capistrano-git-submodule-strategy)
 
+**NOTE:** The project is looking for active maintainers.
+
 ## Using
 
 #### Gemfile
