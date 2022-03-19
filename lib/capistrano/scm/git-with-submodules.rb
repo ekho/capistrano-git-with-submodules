@@ -29,7 +29,7 @@ class Capistrano::SCM::Git::WithSubmodules < Capistrano::Plugin
 
                 execute :git, :reset, '--mixed', quiet, fetch(:branch), '--'
                 execute :git, :submodule, 'sync', '--recursive', quiet
-                execute :git, :submodule, 'update', '--init', '--checkout', '--recursive', quiet
+                execute :git, :submodule, 'update', '--init', '--checkout', '--recursive', '--remote',  quiet
                 execute :find, release_path, "-name '.git'", "|",  "xargs -I {} rm -rf#{verbose} '{}'"
                 execute :rm, "-f#{verbose}", temp_index_file_path.to_s
               end if test :test, '-f', release_path.join('.gitmodules')
