@@ -30,7 +30,7 @@ class Capistrano::SCM::Git::WithSubmodules < Capistrano::Plugin
                 execute :git, :reset, '--mixed', quiet, fetch(:branch), '--'
                 update_submodule = proc do
                   execute :git, :submodule, 'update',
-                          '--init', '--checkout', '--recursive', '--remote', quiet
+                          '--init', '--checkout', '--recursive', quiet
                 end
                 begin
                   update_submodule.call
